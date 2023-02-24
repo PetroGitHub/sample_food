@@ -1,0 +1,67 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+.header {
+  padding: 60px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  display: flex;
+
+  &__list {
+    display: flex;
+  }
+
+  &__list-item {
+    margin-right: 45px;
+  }
+
+  &__list-link {
+    color: $default;
+  }
+}
+
+.user-nav {
+
+
+  &__link {
+    position: relative;
+  }
+
+  &__link {
+    margin-left: 35px;
+  }
+
+  &__num {
+    position: absolute;
+    right: -7px;
+    top: -5px;
+    background-color: #FF6838;
+    background-position: center;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    font-size: 10px;
+    line-height: 12px;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 1px;
+  }
+
+
+  &__num {
+    position: absolute;
+  }
+}
+
+
+
+@import 'media';
