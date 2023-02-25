@@ -3,6 +3,8 @@
 @import 'reset';
 @import 'global';
 
+.wrapper {}
+
 .header {
   padding: 60px 0;
 
@@ -13,6 +15,25 @@
   }
 }
 
+.logo {
+  transition: outline 0.3s, opacity 0.3s;
+
+  &:focus {
+    outline: 2px solid $orange;
+    border-radius: 5px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+    outline: none;
+  }
+}
+
+
 .menu {
   display: flex;
 
@@ -21,45 +42,321 @@
   }
 
   &__list-item {
-    margin-right: 45px;
+    margin-right: 46px;
+    font-size: 18px;
   }
 
   &__list-link {
-    color: $default;
+    color: $dark;
+    transition: outline 0.3s, color 0.3s, text-shadow 0.3s;
+  }
+
+  &__list-link:focus {
+    outline: 2px solid $orange;
+    border-radius: 5px;
+  }
+
+  &__list-link:hover {
+    color: $orange;
+  }
+
+  &__list-link:active {
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    outline: none;
+    color: $dark;
+  }
+
+
+  &__list-link--active {
+    color: $orange;
   }
 }
 
 .user-nav {
-  &__link {
+  &__link--active {
     position: relative;
   }
 
   &__link {
-    margin-left: 35px;
+    margin: 0 13px;
   }
+
+  &__link:focus {
+    background: #FFF2ED;
+  }
+
+  &__link:hover {}
+
+  &__link:active {}
+
 
   &__num {
     position: absolute;
     right: -7px;
-    top: -5px;
-    background-color: #FF6838;
+    top: -8px;
+    background-color: $orange;
     background-position: center;
     border-radius: 50%;
     width: 14px;
     height: 14px;
     font-size: 10px;
     line-height: 12px;
-    color: #FFFFFF;
+    color: $light;
     text-align: center;
     padding-top: 1px;
   }
+}
 
 
-  &__num {
-    position: absolute;
+.hero {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__inner {
+    max-width: 450px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 66px;
+    text-transform: uppercase;
+    color: $darkblue;
+    margin-bottom: 20px;
+  }
+
+  &__title span {
+    color: $orange;
+  }
+
+  &__text {
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  &__image {
+    max-width: 560px;
+    width: 100%;
+    max-height: 660px;
+    height: 100vh;
+    background-repeat: no-repeat;
+  }
+
+  &__btn {
+    padding: 12px 32px;
+    font-size: 18px;
+    margin-right: 34px;
+  }
+
+  &__descr {
+    color: $darkblue;
+    line-height: 1.5;
+    text-decoration: underline;
+    transition: outline 0.3s, color 0.3s, text-shadow 0.3s;
+  }
+
+  &__descr:focus {
+    outline: 2px solid $orange;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  &__descr:hover {
+    color: $orange;
+    text-decoration: none;
+  }
+
+  &__descr:active {
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    outline: none;
+    color: $dark;
   }
 }
 
+.category {
+  text-align: center;
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__inner {
+    margin-bottom: 45px;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  &__item {
+    margin-right: 23px;
+  }
+
+  &__link {
+    background-color: $light;
+    box-shadow: 0px 0px 0px 1px $silver-200;
+    border-radius: 5px;
+    padding: 22px 32px;
+    max-height: 70px;
+    color: $dark;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: outline 0.3s, background-color 0.3s, box-shadow 0.3s;
+
+  }
+
+  &__link--active {
+    color: $light;
+    background-color: $orange;
+    transition: outline 0.3s, background-color 0.3s;
+
+  }
+
+  &__link--active:focus {
+    outline: 2px solid $orange;
+    border-radius: 5px;
+    background-color: $light;
+    color: $darkblue;
+  }
+
+  &__link:focus {
+    outline: 2px solid $orange;
+    border-radius: 5px;
+  }
+
+  &__link:hover {
+    background-color: rgba(255, 122, 80, 0.1);
+    color: $orange;
+    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    border-radius: 5px;
+  }
+
+  &__link:active {
+    background: #FFFFFF;
+    box-shadow: inset 0px -5px 12px rgba(255, 104, 56, 0.2);
+    border-radius: 5px;
+  }
+
+
+
+
+
+
+  &__link::before {
+    content: '';
+    -webkit-mask-image: url('../images/icons/icon-category-burger.svg');
+    mask-image: url('../images/icons/icon-category-burger.svg');
+    min-width: 44px;
+    height: 44px;
+    background-color: $dark;
+    transition: background-color 0.3s;
+  }
+
+  &__link:focus:before {
+    background-color: $darkblue;
+  }
+
+  &__link:hover:before {
+    background-color: $orange;
+  }
+
+  &__link--active::before {
+    background-color: $light;
+  }
+
+  &__link-pizza::before {
+    -webkit-mask-image: url('../images/icons/icon-category-pizza.svg');
+    mask-image: url('../images/icons/icon-category-pizza.svg');
+  }
+
+  &__link-burger::before {
+    -webkit-mask-image: url('../images/icons/icon-category-sandvich.svg');
+    mask-image: url('../images/icons/icon-category-sandvich.svg');
+  }
+
+  &__link-asia::before {
+    -webkit-mask-image: url('../images/icons/icon-category-asia.svg');
+    mask-image: url('../images/icons/icon-category-asia.svg');
+  }
+
+  &__link-dish::before {
+    -webkit-mask-image: url('../images/icons/icon-category-dish.svg');
+    mask-image: url('../images/icons/icon-category-dish.svg');
+  }
+
+  .burger {
+    margin-bottom: 60px;
+
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+
+    &__item {
+      padding: 15px 20px;
+      max-width: 210px;
+      width: 100%;
+      max-height: 299px;
+      height: 100vh;
+      background-color: $light;
+      box-shadow: 0px 0px 0px 1px $silver-200;
+      border-radius: 5px;
+    }
+
+    &__img {
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    &__name {
+      font-size: 15px;
+      line-height: 18px;
+      font-weight: 400;
+      min-height: 43px;
+    }
+
+    &__price {
+      margin-bottom: 10px;
+    }
+
+    &__btn {
+      font-size: 14px;
+      padding: 7px 16px;
+    }
+
+    &__add {
+      color: $darkblue;
+      line-height: 1.5;
+      text-decoration: underline;
+      transition: outline 0.3s, color 0.3s, text-shadow 0.3s;
+    }
+
+    &__add:focus {
+      outline: 2px solid $orange;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    &__add:hover {
+      color: $orange;
+      text-decoration: none;
+    }
+
+    &__add:active {
+      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+      outline: none;
+      color: $dark;
+    }
+  }
+
+}
 
 
 @import 'media';
