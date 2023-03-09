@@ -8,32 +8,33 @@ html {
   box-sizing: inherit;
 }
 
-ul[class],
-ol[class] {
-  padding: 0;
+h1,
+h2,
+h3 {
+  font-weight: normal;
 }
 
 body,
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p,
-ul[class],
-ol[class],
-li,
+ul,
+ol,
 figure,
 figcaption,
-blockquote,
-dl,
-dd {
+blockquote {
   margin: 0;
 }
 
-ul[class] {
+ul,
+ol {
+  padding: 0;
   list-style: none;
+}
+
+label {
+  display: block;
 }
 
 img {
@@ -45,9 +46,23 @@ input,
 button,
 textarea,
 select {
+  appearance: none;
+  outline: none;
+  border: none;
   font: inherit;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+address {
+  font-style: none;
 }

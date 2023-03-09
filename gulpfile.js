@@ -104,4 +104,4 @@ exports.cleanDist = cleanDist;
 exports.svgSprites = svgSprites;
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(svgSprites, styles, build, scripts, browsersync, watching);
+exports.default = parallel(svgSprites, styles, scripts, build, browsersync, watching);
