@@ -4,7 +4,6 @@
 
   &__content {
     display: flex;
-    flex-wrap: wrap;
     gap: 70px;
     margin-bottom: 60px;
   }
@@ -18,22 +17,28 @@
   &__nav {}
 
   &__menu {
+
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-auto-flow: column;
-    gap: 20px 90px;
+    grid-template-columns: 153px 90px 191px;
+    grid-template-rows: 25px;
+    gap: 20px 70px;
 
-    .menu__item {
-      grid-column: 3;
+    //display: grid;
+    //grid-template-columns: repeat(3, auto);
+    //grid-auto-flow: column;
+    //gap: 20px 73px;
 
-      &:nth-child(-n+4) {
-        grid-column: 1;
-      }
+    //.menu__item {
+    //  grid-column: 3;
 
-      &:nth-child(n+5):nth-child(-n+8) {
-        grid-column: 2;
-      }
-    }
+    //  &:nth-child(-n+4) {
+    //    grid-column: 1;
+    //  }
+
+    //  &:nth-child(n+5):nth-child(-n+8) {
+    //    grid-column: 2;
+    //  }
+    //}
   }
 
   &__bottom {

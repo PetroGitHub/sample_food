@@ -7,6 +7,8 @@ $rightPos: calc((100vw - 1170px) / 2);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right $rightPos center;
+  padding-bottom: 25px;
+  margin-bottom: 111px;
 
   &__title {
     max-width: 450px;

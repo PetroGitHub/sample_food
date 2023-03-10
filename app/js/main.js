@@ -1,7 +1,11 @@
 $(function () {
 
+
+
   const filterBtns = document.querySelectorAll(".categories-nav__btn");
   const grid = document.querySelector(".categories-list");
+
+
 
   filterBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -42,5 +46,12 @@ $(function () {
       header.classList.remove("sticky");
     }
   };
+
+  $('.review-slider__content').slick({
+    dots: true,
+    nextArrow: '<button type="button" class="slick-prev"><img src="images/next-arrow.png" alt="arrow right"></button>',
+    prevArrow: '<button type="button" class="slick-next"><img src="images/prev-arrow.png" alt="arrow right"></button>'
+
+  });
 
 });

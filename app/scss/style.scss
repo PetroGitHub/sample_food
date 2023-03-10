@@ -2,6 +2,7 @@
 @import 'fonts';
 @import 'reset';
 @import 'mixins';
+@import 'libs';
 @import 'global';
 
 @import 'parts/header';
@@ -11,6 +12,10 @@
 @import 'parts/product-cards';
 @import 'parts/features-section';
 @import 'parts/restorant-section';
+@import 'parts/review-slider-section';
+@import 'parts/application-section';
+
+
 
 
 @import 'parts/footer';

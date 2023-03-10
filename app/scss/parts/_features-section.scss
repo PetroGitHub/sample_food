@@ -1,5 +1,4 @@
-$leftPos: calc((100vw - 1170px) / 2);
-
+$leftPos: calc((100vw - 1030px) / 2);
 
 .features {
   min-height: 585px;
@@ -8,8 +7,6 @@ $leftPos: calc((100vw - 1170px) / 2);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left $leftPos center;
-
-
 
   &__content {
     max-width: 470px;
